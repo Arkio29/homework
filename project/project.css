@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.coffee-shop{
+    margin-left: 20rem;
+    display: inline;
+}
+.coffee-shop-h1{
+    margin-bottom: 4rem;
+}
+.coffee-shop label{
+    margin-bottom: 3rem;
+}
+.coffee-shop input,select{
+    margin-bottom: 1rem;
+}
+.menu{
+    margin-left: 30rem;  
+    position: absolute;
+    top: 3%;
+    margin-left: 620px;
+}
+.menu-h2{
+    margin-left: 10rem;
+}
+.display{
+    display: flex;
+}
+.menu .hot-coffee{
+    width: 150px;
+    border: 2px solid rgb(180, 170, 155);
+    flex-direction: column;
+}
+.menu .cold-coffee{
+    width: 150px;
+    border: 2px solid rgb(180, 170, 155);
+    flex-direction: column;
+}
+.menu .cup-size{
+    width: 150px;
+    border: 2px solid rgb(180, 170, 155);
+    flex-direction: column;
+}
+.menu .coffee-orders {
+    width: 150px;
+    border: 2px solid rgb(180, 170, 155);
+    flex-direction: column;
+}
+

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Header</title>
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    .header-wapper {
+      display: flex;
+      justify-content: space-between;
+      background-color: #a305a3;
+      padding: 1.2rem 1rem;
+      border-radius: 50px;
+      align-items: center;
+      margin: 1rem;
+      color: white;
+    }
+
+    .menus {
+      list-style: none;
+      display: flex;
+    }
+
+    .menus li {
+      margin: 0 1rem;
+    }
+
+    .menus li a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .login {
+      display: flex;
+      gap: 10px;
+    }
+
+    .login button {
+      padding: 0.6rem 1.5rem;
+      border-radius: 30px;
+      border: none;
+      font-size: 20px;
+      background-color: #ee82ee;
+      color: white;
+    }
+
+    #btn-menu {
+      display: none;
+      color: white;
+      width: 63px;
+      background-color: transparent;
+    }
+
+    #open-icon {
+      display: block;
+    }
+
+    #close-icon {
+      display: none;
+    }
+
+    #btn-menu i {
+      width: 100%;
+    }
+
+    @media (max-width: 768px) {
+      .header-wapper {
+        position: relative;
+      }
+
+      .menus {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        top: 0;
+        z-index: -1;
+        background-color: #380c38;
+        padding-top: 80px;
+        left: -450px;
+        border-radius: 50px;
+        /* opacity: 0; */
+        height: 331px;
+        transition: all 0.5s ease-in-out;
+      }
+
+      .menus li {
+        padding: 1rem;
+      }
+
+      .menus li a {
+        color: white;
+      }
+
+      #btn-menu {
+        display: block;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+    integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <div class="header-wapper">
+      <div class="brand">
+        <h2>
+          Agency
+        </h2>
+      </div>
+      <ul class="menus">
+        <li>
+          <a href="">Home</a>
+        </li>
+        <li>
+          <a href="">Services</a>
+        </li>
+        <li>
+          <a href="">Project</a>
+        </li>
+        <li>
+          <a href="">Contact</a>
+        </li>
+      </ul>
+      <div class="login">
+        <button>LogIn</button>
+        <button id="btn-menu" class="close">
+          <i class="fa-solid fa-bars" id="open-icon"></i>
+          <i class="fa-solid fa-xmark" id="close-icon"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <script> 
+    document.getElementById('btn-menu').onclick = (e) => {
+      console.log(e.target.parentElement.classList.contains('close'))
+
+      if (e.target.parentElement.classList.contains('close')) {
+        //   document.getElementsByClassName('menus')[0].style.opacity = 1
+        document.getElementsByClassName('menus')[0].style.left= 0
+          e.target.parentElement.classList.remove('close')
+        document.getElementById('open-icon').style.display = 'none'
+        document.getElementById('close-icon').style.display = 'block'
+      } else {
+        //   document.getElementsByClassName('menus')[0].style.opacity = 0
+        document.getElementsByClassName('menus')[0].style.left = "-900px"
+          e.target.parentElement.classList.add('close')
+        document.getElementById('open-icon').style.display = 'block'
+        document.getElementById('close-icon').style.display = 'none'
+      }
+    }
+  </script>
+</body>
+
+</html>

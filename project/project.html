@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coffee Shop</title>
+    <link rel="stylesheet" href="../project/project.css">
+</head>
+<body>
+    <div class="coffee-shop">
+        <h1 class="coffee-shop-h1">Dream Bean Coffee Shop</h1>
+        <label >Please Enter your First Name</label><br>
+        <input type="text"><br>
+        <label >Please Enter your last Name</label><br>
+        <input type="text"><br>
+        <label  >Fauvrite Coffee</label><br>
+        <select  id="fav-coffee">
+            <option value="">Hot Coffee</option>
+            <option value="">Cold Coffee</option>
+        </select><br>
+        <label >Phone Number</label><br>
+        <input type="number"><br>
+        <label for="">Date</label><br>
+        <input type="date"><br>
+        <button>Save Customer</button>
+    </div>
+    <div class="menu">
+        <h2 class="menu-h2">Menu</h2>
+        <div class="hot-coffee display">
+            <h4>Hot Coffee</h4>
+            <label for="">Hot Coffee</label>
+            <input type="checkbox" name="" id="">
+            <label for="">Hot Coffee</label>
+            <input type="checkbox"  name="" id="">
+            <label for="">Hot Coffee</label>
+            <input type="checkbox"  name="" id="">
+            <label for="">Hot Coffee</label>
+            <input type="checkbox"  name="" id="">
+        </div>
+        <div class="cold-coffee display">
+            <h4>Cold-Coffee</h4>
+            <label for="">Cold Coffee</label>
+            <input type="checkbox"  name="" id="">
+            <label for="">Cold Coffee</label>
+            <input type="checkbox"  name="" id="">
+            <label for="">Cold Coffee</label>
+            <input type="checkbox"  name="" id="">
+            <label for="">Cold Coffee</label>
+            <input type="checkbox"  name="" id="">
+        </div>
+        <div class="cup-size display">
+            <h4>Size</h4>
+            <label for="">Small</label>
+            <input type="checkbox"  name="" id="">
+            <label for="">Medium</label>
+            <input type="checkbox"  name="" id="">
+            <label for="">Large</label>
+            <input type="checkbox"  name="" id="">
+        </div>
+        <div class="coffee-orders display">
+            <h4>Cofffee Orders</h4>
+            <label for="">Total</label>
+            <input type="number">
+        </div>
+        <button>Calculate Cost</button>
+        <span>Price</span>
+    </div>
+    <table>
+        <thead>
+            <th>No.</th>
+            <th>name</th>
+            <th>Fauvrite</th>
+            <th>Phonenumber</th>
+            <th>Date</th>
+            <th>Coffee</th>
+            <th>Cup-size</th>
+            <th>Cup-Orders</th>
+            <th>Total</th>
+        </thead>
+        <tbody id="list"></tbody>
+        <tfoot>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td id="total-cost"></td>
+        </tfoot>
+    </table>
+    
+</body>
+</html>
